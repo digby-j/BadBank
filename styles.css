@@ -1,0 +1,5 @@
+  a.nav-link:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    background: #04AA6D;
+}
