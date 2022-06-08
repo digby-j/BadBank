@@ -10,6 +10,8 @@ const firebaseConfig = {
 
     authDomain: "badbank-8cf52.firebaseapp.com",
   
+    databaseURL: "https://badbank-8cf52-default-rtdb.firebaseio.com",
+  
     projectId: "badbank-8cf52",
   
     storageBucket: "badbank-8cf52.appspot.com",
@@ -17,6 +19,7 @@ const firebaseConfig = {
     messagingSenderId: "359944407222",
   
     appId: "1:359944407222:web:da82edcb052711e0a83e17"
+  
 };
 
 firebase.initializeApp(firebaseConfig);
