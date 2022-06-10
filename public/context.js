@@ -10,7 +10,7 @@ const firebaseConfig = {
 
     authDomain: "badbank-8cf52.firebaseapp.com",
   
-    databaseURL: "https://badbank-8cf52-default-rtdb.firebaseio.com",
+    //databaseURL: "https://badbank-8cf52-default-rtdb.firebaseio.com",
   
     projectId: "badbank-8cf52",
   
