@@ -2,7 +2,7 @@ var express = require('express');
 var app     = express();
 var cors    = require('cors');
 var dal     = require('./dal.js');
-const e = require('express');
+const e     = require('express');
 
 // used to serve static files from public directory
 app.use(express.static('public'));
@@ -100,6 +100,10 @@ app.get('/account/all', function (req, res) {
     });
 });
 
-var port = 3000;
-app.listen(port);
-console.log('Running on port: ' + port);
+var PORT = 3000;
+// app.listen(port);
+// console.log('Running on port: ' + port);
+
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`server is running on port ${PORT}`)
+});
