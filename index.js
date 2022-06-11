@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.use(cors());
 
 // create user account
-app.get('/account/create/:name/:email/:password', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/create/:name/:email/:password', function (req, res) {
 
     // check if account exists
     dal.find(req.params.email).
@@ -35,7 +35,7 @@ app.get('/account/create/:name/:email/:password', function (req, res) {
 
 
 // login user 
-app.get('/account/login/:email/:password', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/login/:email/:password', function (req, res) {
 
     dal.find(req.params.email).
         then((user) => {
@@ -59,7 +59,7 @@ app.get('/account/login/:email/:password', function (req, res) {
 
 
 // find user account
-app.get('/account/find/:email', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/find/:email', function (req, res) {
 
     dal.find(req.params.email).
         then((user) => {
@@ -69,7 +69,7 @@ app.get('/account/find/:email', function (req, res) {
 });
 
 // find one user by email - alternative to find
-app.get('/account/findOne/:email', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/findOne/:email', function (req, res) {
 
     dal.findOne(req.params.email).
         then((user) => {
@@ -80,7 +80,7 @@ app.get('/account/findOne/:email', function (req, res) {
 
 
 // update - deposit/withdraw amount
-app.get('/account/update/:email/:amount', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/update/:email/:amount', function (req, res) {
 
     var amount = Number(req.params.amount);
 
@@ -92,7 +92,7 @@ app.get('/account/update/:email/:amount', function (req, res) {
 }); 
 
 // all accounts
-app.get('/account/all', function (req, res) {
+app.get('http://jake-digby-fullstackbankingapp.herokuapp.com/account/all', function (req, res) {
 
     dal.all().
         then((docs) => {
