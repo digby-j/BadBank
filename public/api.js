@@ -3,8 +3,8 @@
 const ctx = {
     "accounts": [
         {
-            "name": "jake",
-            "email": "developer@jakedigby.com",
+            "name": "test",
+            "email": "test@email.com",
             "balance": 1000000000,
             "password": "notsecret"
         }

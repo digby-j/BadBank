@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.use(cors());
 
 // create user account
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/create/:name/:email/:password', function (req, res) {
+app.get('/account/create/:name/:email/:password', function (req, res) {
 
     // check if account exists
     dal.find(req.params.email).
@@ -34,7 +34,7 @@ app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/create/:na
 
 
 // login user 
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/login/:email/:password', function (req, res) {
+app.get('/account/login/:email/:password', function (req, res) {
 
     dal.find(req.params.email).
         then((user) => {
@@ -58,7 +58,7 @@ app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/login/:ema
 
 
 // find user account
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/find/:email', function (req, res) {
+app.get('/account/find/:email', function (req, res) {
 
     dal.find(req.params.email).
         then((user) => {
@@ -68,7 +68,7 @@ app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/find/:emai
 });
 
 // find one user by email - alternative to find
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/findOne/:email', function (req, res) {
+app.get('/account/findOne/:email', function (req, res) {
 
     dal.findOne(req.params.email).
         then((user) => {
@@ -79,7 +79,7 @@ app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/findOne/:e
 
 
 // update - deposit/withdraw amount
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/update/:email/:amount', function (req, res) {
+app.get('/account/update/:email/:amount', function (req, res) {
 
     var amount = Number(req.params.amount);
 
@@ -91,7 +91,7 @@ app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/update/:em
 }); 
 
 // all accounts
-app.get('https://jake-digby-fullstackbankingapp.herokuapp.com/account/all', function (req, res) {
+app.get('/account/all', function (req, res) {
 
     dal.all().
         then((docs) => {
