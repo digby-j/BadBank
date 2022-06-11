@@ -5,12 +5,14 @@ const HashRouter    = ReactRouterDOM.HashRouter;
 const BrowserRouter = ReactRouterDOM.BrowserRouter;
 const UserContext   = React.createContext(null);
 
+var db_url = `${process.env.ORMONGO_RS_URL}`;
+
 const firebaseConfig = {
     apiKey: "AIzaSyAsghpyEY97y4_6_u-nbjR9tyeo7A2U-pU",
 
     authDomain: "badbank-8cf52.firebaseapp.com",
   
-    //databaseURL: "https://badbank-8cf52-default-rtdb.firebaseio.com",
+    databaseURL: db_url,
   
     projectId: "badbank-8cf52",
   
