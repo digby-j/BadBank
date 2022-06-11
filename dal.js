@@ -1,4 +1,5 @@
 const { rejects } = require('assert');
+require('dotenv').config();
 
 // const MongoClient   = require('mongodb').MongoClient;
 // const url           = 'mongodb://localhost:27017';

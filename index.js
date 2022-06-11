@@ -3,6 +3,7 @@ var app     = express();
 var cors    = require('cors');
 var dal     = require('./dal.js');
 const e     = require('express');
+require('dotenv').config();
 
 // used to serve static files from public directory
 app.use(express.static('public'));
@@ -104,6 +105,9 @@ app.get('/account/all', function (req, res) {
 // app.listen(port);
 // console.log('Running on port: ' + port);
 
-app.listen(process.env.PORT || PORT, () => {
-    console.log(`server is running on port ${PORT}`)
-});
+// app.listen(process.env.PORT || PORT, () => {
+//     console.log(`server is running on port ${PORT}`)
+// });
+
+const port = process.env.PORT || 3000;
+app.listen(port);
