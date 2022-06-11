@@ -2,7 +2,7 @@ const { rejects } = require('assert');
 
 // const MongoClient   = require('mongodb').MongoClient;
 // const url           = 'mongodb://localhost:27017';
-let db              = null;
+// let db              = null;
 
 // Ensure you have run 'npm install mongodb'
 var MongoClient = require('mongodb').MongoClient;
